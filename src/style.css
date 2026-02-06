@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'ENFA';
+    src: url('@/assets/font/enA.ttf') format('truetype');
+    unicode-range: U+0000-007F;
+}
+@font-face {
+    font-family: 'ZHFA';
+    src:url('@/assets/font/zhA_main.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'ENFB';
+    src:url('@/assets/font/enB.ttf') format('woff2');
+}
+
+:root {
+    --color-primary-rgb: 102,178,255;
+    --color-primary: #66b2ff;
+    --color-on-primary-rgb: 255,255,255;
+    --color-on-primary: #ffffff;
+    --color-primary-container-rgb: 230,244,255;
+    --color-primary-container: #e6f4ff;
+    --color-on-primary-container-rgb: 51,102,153;
+    --color-on-primary-container: #336699;
+    --color-secondary-rgb: 255,182,203;
+    --color-secondary: #ffb6cb;
+    --color-on-secondary-rgb: 255,255,255;
+    --color-on-secondary: #ffffff;
+    --color-secondary-container-rgb: 255,235,240;
+    --color-secondary-container: #ffebf0;
+    --color-on-secondary-container-rgb: 255,102,153;
+    --color-on-secondary-container: #ff6699;
+    --color-tertiary-rgb: 182,221,255;
+    --color-tertiary: #b6ddff;
+    --color-on-tertiary-rgb: 51,51,51;
+    --color-on-tertiary: #333333;
+    --color-tertiary-container-rgb: 240,249,255;
+    --color-tertiary-container: #f0f9ff;
+    --color-on-tertiary-container-rgb: 102,153,204;
+    --color-on-tertiary-container: #6699cc;
+    --color-error-rgb: 255,102,102;
+    --color-error: #ff6666;
+    --color-on-error-rgb: 255,255,255;
+    --color-on-error: #ffffff;
+    --color-error-container-rgb: 255,230,230;
+    --color-error-container: #ffe6e6;
+    --color-on-error-container-rgb: 204,51,51;
+    --color-on-error-container: #cc3333;
+    --color-background-rgb: 250,252,255;
+    --color-background: #fafcff;
+    --color-on-background-rgb: 30,40,50;
+    --color-on-background: #1e2832;
+    --color-surface-rgb: 255,255,255;
+    --color-surface: #ffffff;
+    --color-on-surface-rgb: 20,30,40;
+    --color-on-surface: #141e28;
+    --color-surface-variant-rgb: 240,248,255;
+    --color-surface-variant: #f0f8ff;
+    --color-on-surface-variant-rgb: 60,100,140;
+    --color-on-surface-variant: #3c648c;
+    --color-outline-rgb: 200,220,240;
+    --color-outline: #c8dcf0;
+    --color-outline-variant-rgb: 220,235,250;
+    --color-outline-variant: #dcebfa;
+    --color-shadow-rgb: 100,140,180;
+    --color-shadow: #648cb4;
+    --color-scrim-rgb: 100,140,180;
+    --color-scrim: #648cb4;
+    --color-inverse-surface-rgb: 40,60,80;
+    --color-inverse-surface: #283c50;
+    --color-inverse-on-surface-rgb: 240,248,255;
+    --color-inverse-on-surface: #f0f8ff;
+    --color-inverse-primary-rgb: 182,221,255;
+    --color-inverse-primary: #b6ddff;
+    --color-surface-0-rgb: 255,255,255;
+    --color-surface-0: #ffffff;
+    --color-surface-1-rgb: 250,252,255;
+    --color-surface-1: #fafcff;
+    --color-surface-2-rgb: 245,250,255;
+    --color-surface-2: #f5faff;
+    --color-surface-3-rgb: 240,248,255;
+    --color-surface-3: #f0f8ff;
+    --color-surface-4-rgb: 235,246,255;
+    --color-surface-4: #ebf6ff;
+    --color-surface-5-rgb: 230,244,255;
+    --color-surface-5: #e6f4ff;
+    --color-accent-pink-rgb: 255,182,203;
+    --color-accent-pink: #ffb6cb;
+    --color-accent-light-blue-rgb: 182,221,255;
+    --color-accent-light-blue: #b6ddff;
+    --color-accent-soft-yellow-rgb: 255,250,200;
+    --color-accent-soft-yellow: #fffac8;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        outline: none;
+    }
+    a:visited {
+        color: inherit;
+    }
+
+    main{
+        display: flex;
+    }
+    main .MAINcontent{
+        flex: 1;
+        margin-left: 8rem;
+    }
+}

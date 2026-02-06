@@ -1,0 +1,47 @@
+{
+  "codeCard": {
+    "plat": [
+      { "name": "Android" , "color": "#66bb6a"},
+      { "name": "Win32" , "color": "#64b5f6"},
+      { "name": "Web(Vite)" , "color": "#ffd54f"},
+      { "name": "WinUI3" , "color": "#64b5f6"}
+    ],
+    "codeLang": [
+      { "name": "Kotlin" , "color": "#ef5350"},
+      { "name": "TypeScript" , "color": "#7986cb"},
+      { "name": "Html/CSS" , "color": "#ffb74d"},
+      { "name": "Java" , "color": "#a1887f"},
+      { "name": "C/C++" , "color": "#4db6ac"}
+    ]
+  },
+  "contactCard": {
+    "contactLink": [
+      {"name": "Github", "link": "https://github.com/xksyu2021","icon": "bi bi-github"},
+      {"name": "Email", "link": "mailto:xksyu2021@gmail.com","icon": "bi bi-envelope-fill"}
+    ],
+    "bio": {
+      "text": "\t从WordPress低代码搭建网站，到接触HTML与CSS；从C语言黑窗口第一次输出“Hello World”，到安卓Kotlin精密复杂的应用程序；从基础的ppt排版，到解决系统疑难杂症......在探索计算机的世界里，向前，历经坎坷，不断成长，回首是收获。\n\t我曾迷茫于过往，因为尽管拼尽全力，希望依然在眼前悉数破灭，唯有遗憾与无奈的残影。可是，也许原本就不需要那么多的希望——走下去，你走过的地方便有了道路，你所望的方向一定星汉灿烂。\n\t雨落之后，天空洒下光明，启程吧。",
+      "quote": "路漫漫其修远兮，吾将上下而求索。\n去飞吧，就算迷茫也不要停下。"
+    }
+  },
+  "project": [
+    {
+      "name": "UI for BDS",
+      "content": "Minecraft基岩版服务端的图形化界面。该软件包含配置调整、文件操作等功能，并利用进程间管道实现命令快捷发送。",
+      "link": "",
+      "logo": "./public/img/block1.png"
+    },
+    {
+      "name": "Muti-Channel Alarm",
+      "content": "可以手动选择振铃通道（如：耳机/扬声器/混合等）的Android闹钟软件。软件采用Material UI 3设计理念。",
+      "link": "",
+      "logo": "./public/img/block2.png"
+    },
+    {
+      "name": "Encoding Op",
+      "content": "提供各类编码的展示/转换参考的winUi3软件。包含字符编码、进制转换、各类ui控件色卡等功能。",
+      "link": "",
+      "logo": "./public/img/block3.png"
+    }
+  ]
+}
