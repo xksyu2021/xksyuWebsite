@@ -21,6 +21,5 @@
     display: flex;
     gap: 1rem;
     margin: 1rem;
-    //flex-grow: 1;
   }
 </style>

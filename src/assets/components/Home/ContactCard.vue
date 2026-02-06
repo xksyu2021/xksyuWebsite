@@ -45,7 +45,7 @@
       </div>
     </div>
     <div  class="card cardB">
-      <img @click.self="openPopup"  src="/img/bioPic.png"/>
+      <img @click.self="openPopup"  src="/img/bioPic.png" alt=""/>
       <div class="quote">{{config.contactCard.bio.quote}}</div>
     </div>
   </div>

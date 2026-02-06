@@ -13,7 +13,7 @@
   <div class="list">
     <div class="project" v-for="singleProject in config.project" v-if="config.project">
       <div class="titleLine">
-        <img :src="singleProject.logo"/>
+        <img :src="singleProject.logo" alt=""/>
         <div class="title" >{{singleProject.name}}</div>
       </div>
       <div class="content">{{singleProject.content}}</div>
