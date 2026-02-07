@@ -18,7 +18,7 @@
     <div class="project" v-for="singleProject in config.project" v-if="config.project">
       <div class="headLine">
         <div class="title">{{singleProject.name}}</div>
-        <div class="buttonGroup">
+        <div class="buttonGroup no-select">
           <div class="fButton buttonA" @click="linkTo(singleProject.github)">Github</div>
           <div class="fButton buttonB" @click="linkTo(singleProject.gogs)">Gogs</div>
         </div>

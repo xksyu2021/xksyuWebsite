@@ -20,12 +20,14 @@
   <nav>
     <img class="logo" :src="logo" alt="logo" @click="spark"/>
     <div v-for="singleNav in navList" :key="singleNav.path">
-      <router-link :to="singleNav.path">
-        <div class="list">
-          <div :class="singleNav.icon" class="icon" />
-          <div class="name">{{singleNav.name}}</div>
-        </div>
-      </router-link>
+      <template v-if="singleNav.show">
+        <router-link :to="singleNav.path">
+          <div class="list">
+            <div :class="singleNav.icon" class="icon" />
+            <div class="name no-select">{{singleNav.name}}</div>
+          </div>
+        </router-link>
+      </template>
     </div>
     <div class="spacer"/>
   </nav>

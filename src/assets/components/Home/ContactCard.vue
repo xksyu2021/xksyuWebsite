@@ -36,7 +36,7 @@
 
 <template>
   <div  class="column">
-    <div  class="card cardA">
+    <div  class="card cardA no-select">
       <div class="subCardA">
         <div  class="contactLine" v-for="contact in config.contactCard.contactLink" v-if="config.contactCard.contactLink">
           <div :class="contact.icon"/>

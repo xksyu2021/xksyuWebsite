@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="headCard">
+  <div class="headCard no-select">
     <div class="zhContent">流年未止 未来可期</div>
     <div class="enContent">The story continues.</div>
   </div>

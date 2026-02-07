@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import {ref, onMounted, computed} from 'vue'
 const config = ref({
   clips:[] as string[],
   article:[] as {path:string,title: string,date: string,clip: string,content: string}[]
@@ -9,20 +9,27 @@ onMounted(async () => {
   config.value = await response.json()
 })
 
-const clipSelect = ref("")
+const clipSelect = ref("全部显示")
 const clipAll = ref(true)
+
+const filteredArticles = computed(() => {
+  if (clipAll.value) return config.value.article
+  return config.value.article.filter(post => post.clip === clipSelect.value)
+})
+
 </script>
 
 <template>
-  <div class="clipRow">
-    <div class="clip">全部显示</div>
+  <div class="clipRow no-select">
+    <div class="clip" @click="clipAll = true">全部显示</div>
     <div class="overlayA" v-for="clip in config.clips">
-      <div class="clip">{{clip}}</div>
+      <div class="clip" @click="clipSelect=clip;clipAll=false">{{clip}}</div>
     </div>
   </div>
   <div class="grid">
-    <div class="overlayB" v-for="post in config.article">
-      <div class="card" v-if="post.clip === clipSelect || clipAll">
+    <div class="overlayB" v-for="post in filteredArticles" :key="post.path"
+         @click="$router.push(`/post/${encodeURIComponent(post.path)}`)">
+      <div class="card">
         <div class="title">{{post.title}}</div>
         <div class="line">
           <div class="clip">{{post.clip}}</div>
@@ -46,24 +53,27 @@ const clipAll = ref(true)
 }
 
 .grid{
-  display: flex;
-  gap: 1rem;
-  grid-template-columns: 1fr 1fr;
+  columns: 3;
+  column-gap: 1rem;
   margin: 1rem;
 }
 
 .overlayB{
-   border-radius: 15px;
-   break-inside: avoid;
-   box-sizing: border-box;
+  border-radius: 15px;
+  break-inside: avoid;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
 }
-.overlayB:nth-child(odd){
+.overlayB:nth-child(3n+1){
   background-color: var(--color-primary-container);
 }
-.overlayB:nth-child(even){
+.overlayB:nth-child(3n+2){
   border-width: 1.5px;
   border-style: solid;
   border-color: var(--color-on-primary-container);
+}
+.overlayB:nth-child(3n){
+  background-color: var(--color-surface-2);
 }
 
 .card{
@@ -97,5 +107,10 @@ const clipAll = ref(true)
   display: flex;
   text-align: center;
   justify-content: center;
+}
+
+.clip:hover{
+  background-color: var(--color-primary-container);
+  transition: background-color 0.7s ease;
 }
 </style>

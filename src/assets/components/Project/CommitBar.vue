@@ -5,7 +5,7 @@ const day = Math.floor((timestampNow - timestampStart)/(1000*60*60*24))
 </script>
 
 <template>
-  <div  class="row">
+  <div  class="row no-select">
     <div class="github">
       <img src="https://ghchart.rshah.org/xksyu2021" alt=""/>
     </div>

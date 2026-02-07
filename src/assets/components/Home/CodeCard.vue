@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <div class="codeCard">
+  <div class="codeCard no-select">
     <div class="title">开发平台</div>
     <div   class="content">
       <div class="single" v-for="singlePlat in config.codeCard.plat"  v-if="config.codeCard">
