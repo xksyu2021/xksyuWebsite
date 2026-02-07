@@ -1,5 +1,29 @@
-# Vue 3 + TypeScript + Vite
+**vite + vue + typescript** | 轻量可爱风格的个人网站
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+[样版页面](http://xksyu.online)
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 项目特点 ##
+尽管是静态网站，但是实现了内容与框架的分离，基础内容硬编码，在构建前调整。而项目介绍/文章等，只需在json文件中编辑即可。
+
+网站采用类似MD3设计的蓝-白-粉配色，卡片式模块化设计。
+
+## 功能列表 ##
+侧边栏：单页面路由导航
+
+首页：标题文案 + 所擅长编程语言 + 项目简介 + 图片 + 弹出框个人简介 + 练习渠道
+
+项目：Github热力图 + 日期计数器 + 项目列表
+
+文章：标签筛选 + 瀑布流文章内容
+
+> 工具：正在开发...
+
+Git：可以导航至自己的仓库
+
+
+## 注意事项 ##
+请自行修改Law.vue的备案信息，不得冒用。
+
+文章提交后，需要在json配置内同步元数据。
+
+暂未实现移动端相应设计。
