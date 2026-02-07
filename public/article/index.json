@@ -1,0 +1,19 @@
+{
+  "clips": [
+    "编程知识","计算机基础","Minecraft","随笔","默认"
+  ],
+  "article": [
+    {"path": "test.md",
+      "title": "测试文章标题A",
+      "date": "2007-01-19",
+      "clip": "默认",
+      "content": "测试文章简介"
+    },
+    {"path": "test.md",
+      "title": "测试文章标题B",
+      "date": "2007-01-19",
+      "clip": "默认",
+      "content": "测试文章简介"
+    }
+  ]
+}

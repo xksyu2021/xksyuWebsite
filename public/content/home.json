@@ -29,19 +29,19 @@
       "name": "UI for BDS",
       "content": "Minecraft基岩版服务端的图形化界面。该软件包含配置调整、文件操作等功能，并利用进程间管道实现命令快捷发送。",
       "link": "",
-      "logo": "./public/img/block1.png"
+      "logo": "/img/block1.png"
     },
     {
       "name": "Muti-Channel Alarm",
       "content": "可以手动选择振铃通道（如：耳机/扬声器/混合等）的Android闹钟软件。软件采用Material UI 3设计理念。",
       "link": "",
-      "logo": "./public/img/block2.png"
+      "logo": "/img/block2.png"
     },
     {
       "name": "Encoding Op",
       "content": "提供各类编码的展示/转换参考的winUi3软件。包含字符编码、进制转换、各类ui控件色卡等功能。",
       "link": "",
-      "logo": "./public/img/block3.png"
+      "logo": "/img/block3.png"
     }
   ]
 }
