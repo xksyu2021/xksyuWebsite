@@ -3,9 +3,9 @@
   "footer": {
     "content": "夏空拾雨小站 wxp © 2025-2026",
     "icpLink": "https://beian.miit.gov.cn/",
-    "icp": "蜀ICP备2025166785号-1",
-    "policeLink": "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41030502001154",
-    "police": "豫公网安备41030502001154号"
+    "icp": "某ICP备0000000000号-x",
+    "policeLink": "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=0",
+    "police": "某公网安备00000000000000号"
   },
   "git": {
     "title": "Xksyu 源代码版本管理仓库",
