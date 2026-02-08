@@ -1,20 +1,33 @@
 <script setup lang="ts">
+  import { ref, onMounted } from 'vue'
+  const config = ref({
+    git:{
+      title:''as string,subTitle:''as string,loginLink:''as string,viewLink:''as string
+    }
+  })
+  onMounted(async () => {
+    const response = await fetch('/content/basic.json')
+    config.value = await response.json()
+  })
 
+  const linkTo = (url: string) => {
+    window.location.href = url
+  }
 </script>
 
 <template>
   <div class="overlay">
     <div class="row">
       <div class="head">
-        <div class="title">Xksyu 源代码版本管理仓库</div>
-        <div class="subtitle">2025-2026 | Powered By Gogs</div>
+        <div class="title">{{config.git.title}}</div>
+        <div class="subtitle">{{config.git.subTitle}}</div>
       </div>
       <div class="column">
-        <div class="card login" onclick="window.location.href = 'https://git.xksyu.online/user/login?'">
+        <div class="card login no-select" @click="linkTo(config.git.loginLink)">
           <i class="bi bi-key"/>
           登录
         </div>
-        <div class="card visit" onclick="window.location.href = 'https://git.xksyu.online/explore/repos'">
+        <div class="card visit no-select" @click="linkTo(config.git.viewLink)">
           <i class="bi bi-inboxes"/>
           浏览
         </div>

@@ -1,18 +1,29 @@
 <script setup lang="ts">
-const timestampNow: number = Date.now()
-const timestampStart: number = Date.parse("2025-07-05T00:00:00")
-const day = Math.floor((timestampNow - timestampStart)/(1000*60*60*24))
+import { ref, onMounted } from 'vue'
+const config = ref({
+  bar:{
+    githubLink:''as string,date:''as string,dateContent:''as string,dateContentB:''as string
+  }
+})
+const day = ref(1314)
+onMounted(async () => {
+  const response = await fetch('/content/project.json')
+  config.value = await response.json()
+  const timestampNow: number = Date.now()
+  const timestampStart: number = Date.parse(config.value.bar.date)
+  day.value = Math.floor((timestampNow - timestampStart)/(1000*60*60*24))
+})
 </script>
 
 <template>
   <div  class="row no-select">
     <div class="github">
-      <img src="https://ghchart.rshah.org/xksyu2021" alt=""/>
+      <img :src="config.bar.githubLink" alt=""/>
     </div>
     <img class="pic" src="/public/img/projectPic.png" alt=""/>
     <div class="count">
-      接触程序设计知识
-      <div  class="line2">至今已经<span class="num">{{day}}</span>天</div>
+      {{config.bar.dateContent}}
+      <div  class="line2">{{config.bar.dateContentB}}<span class="num">{{day}}</span>天</div>
     </div>
   </div>
 </template>

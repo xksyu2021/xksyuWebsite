@@ -1,15 +1,23 @@
 <script setup lang="ts">
-
+  import { ref, onMounted } from 'vue'
+  const config = ref({
+    footer:{
+      content:''as string,icpLink:''as string,icp:''as string,police:''as string,policeLink:''as string,
+    }
+  })
+  onMounted(async () => {
+    const response = await fetch('/content/basic.json')
+    config.value = await response.json()
+  })
 </script>
 
 <template>
   <div class="footer">
-    夏空拾雨小站 wxp &copy; 2025
+    {{config.footer.content}}
     <br>
-    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer noopener">蜀ICP备2025166785号-1</a>
+    <a :href="config.footer.icpLink" target="_blank" rel="noreferrer noopener">{{config.footer.icp}}</a>
     |
-    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41030502001154" target="_blank" rel="noreferrer noopener">豫公网安备41030502001154号
-    </a>
+    <a :href="config.footer.policeLink" target="_blank" rel="noreferrer noopener">{{config.footer.police}}</a>
   </div>
 </template>
 

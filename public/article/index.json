@@ -5,42 +5,42 @@
   "article": [
     {
       "path": "test.md",
-      "title": "测试文章标题A",
+      "title": "测试文章标题",
       "date": "2007-01-19",
       "clip": "默认",
       "content": "测试文章简介"
     },
     {
-      "path": "testB.md",
-      "title": "测试文章标题B",
+      "path": "test.md",
+      "title": "测试文章标题",
       "date": "2007-01-19",
       "clip": "默认",
       "content": "测试文章简介\n换行"
     },
     {
-      "path": "testC.md",
-      "title": "测试文章标题C",
+      "path": "test.md",
+      "title": "测试文章标题",
       "date": "2007-01-19",
       "clip": "默认",
       "content": "测试文章简介\n换行"
     },
     {
-      "path": "testD.md",
-      "title": "测试文章标题D",
+      "path": "test.md",
+      "title": "测试文章标题",
       "date": "2007-01-19",
       "clip": "默认",
       "content": "测试文章简介"
     },
     {
-      "path": "testE.md",
-      "title": "测试文章标题E",
+      "path": "test.md",
+      "title": "测试文章标题",
       "date": "2007-01-19",
       "clip": "默认",
       "content": "测试文章简介"
     },
     {
-      "path": "testF.md",
-      "title": "测试文章标题F",
+      "path": "test.md",
+      "title": "测试文章标题",
       "date": "2007-01-19",
       "clip": "默认",
       "content": "测试文章简介"

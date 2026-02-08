@@ -1,4 +1,10 @@
 {
+  "bar": {
+    "githubLink": "https://ghchart.rshah.org/xksyu2021",
+    "date": "2025-07-05T00:00:00",
+    "dateContent": "接触程序设计知识",
+    "dateContentB": "至今已经"
+  },
   "project": [
     {
       "id": "McA",

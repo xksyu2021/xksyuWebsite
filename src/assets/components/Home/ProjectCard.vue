@@ -33,7 +33,6 @@
   padding: 2.5rem;
   background-color: var(--color-surface-2);
   border-radius: 15px;
-  //color: var(--color-surface-2);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

@@ -6,11 +6,15 @@ import MarkdownItGitHubAlerts from "markdown-it-github-alerts";
 
 const route = useRoute()
 const post = ref<any>(null)
+const config = ref({name:'' as string})
 
 onMounted(async () => {
-  const response = await fetch('/article/index.json')
-  const data = await response.json()
+  const responseA = await fetch('/article/index.json')
+  const data = await responseA.json()
   post.value = data.article.find((item: any) => item.path === route.params.id)
+
+  const responseB = await fetch('/content/basic.json')
+  config.value = await responseB.json()
 })
 
 const md = new MarkdownIt({
@@ -32,10 +36,10 @@ onMounted(async () => {
       const rawText = await response.text()
       contentHtml.value = md.render(rawText)
     } else {
-      contentHtml.value = '<h1>文章不存在</h1>'
+      contentHtml.value = '<h1>Failed to load!</h1>'
     }
   } catch (error) {
-    contentHtml.value = '<h1>加载失败</h1>'
+    contentHtml.value = '<h1>Failed to load!</h1>'
   } finally {
     loading.value = false
   }
@@ -48,7 +52,7 @@ onMounted(async () => {
       <div @click="$router.back()" class="back">
         <div class="bi bi-arrow-left-circle"/>
       </div>
-      <div class="head">夏空拾雨小站</div>
+      <div class="head no-select">{{config.name}}</div>
     </div>
     <div class="card">
       <div class="title">{{post.title}}</div>
