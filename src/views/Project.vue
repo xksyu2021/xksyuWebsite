@@ -7,7 +7,3 @@ import CommitBar from "@/assets/components/Project/CommitBar.vue";
   <CommitBar/>
   <ProjectBasic/>
 </template>
-
-<style scoped>
-
-</style>
