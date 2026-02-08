@@ -25,6 +25,6 @@ dist-ssr
 *.sw?
 
 # Personal files
-public/article/*
-!public/article/index.json
-!public/article/test.md
+# public/article/*
+# !public/article/index.json
+# !public/article/test.md
