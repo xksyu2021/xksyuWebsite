@@ -1,45 +1,17 @@
 {
   "bar": {
-    "githubLink": "https://ghchart.rshah.org/xksyu2021",
+    "githubLink": "https://ghchart.rshah.org/example",
     "date": "2025-07-05T00:00:00",
     "dateContent": "接触程序设计知识",
     "dateContentB": "至今已经"
   },
   "project": [
     {
-      "id": "McA",
-      "name": "Muti-Channel Alarm",
-      "github": "https://github.com/xksyu2021/MutiChannel-Alarm",
-      "gogs": "https://git.xksyu.online/xksyu2021/MutiChannel-Alarm",
-      "content": "目前的闹钟软件设计，核心理念是“让用户一定能够接到通知”，所以使用了特殊的系统通道，这很实用。但是，上述设计使得闹钟几乎注定要“外放”，而在某些需要安静的场合（如宿舍、课堂等），上述设计会带来麻烦。\n本软件给用户提供了选择通知通道的选项，用户可以自主选择“一定能让我听到响铃”“只通过耳机响铃，如果耳机断连了，我可以接受听不到铃声”等等个性化的选项。\n此外，软件采用了Material UI 3设计，界面干净简单，也不失美观。"
-    },
-    {
-      "id": "BdsUi",
-      "name": "UI for BDS",
-      "github": "https://github.com/xksyu2021/UI-for-BDS",
-      "gogs": "https://git.xksyu.online/xksyu2021/UI-for-BDS",
-      "content": "仍在开发，数据无价，请及时备份存档数据。\n写这个项目的主要目的是win32API练手。如果你的Minecraft服务器是Windows的，而且使用了远程桌面，不妨一试。软件将BDS服务器黑窗口的部分基础功能、配置文件server.properties的设置、游戏文件处理集成在一个可视化面板上，方便新手操作。"
-    },
-    {
-      "id": "SS",
-      "name": "Sharp Sword",
+      "id": "EG",
+      "name": "ExampleA",
       "github": "",
       "gogs": "",
-      "content": "校园网认证与通常的互联网连接相比，用户感知的操作复杂程度明显增大，时常会出现“不知为何连不上网”“连上了没有网”等等问题。单凭几张截图向他人求助，因为无法实际操作，有时也难以解决问题。\n本软件可以使用户只点几个按钮，就自动联网并弹出登录界面，自动排查问题，轻松连接校园网。即使无法自动解决所有问题，也避免了向他人求助之后，帮助者花费大量时间排查基础错误，提升效率。"
-    },
-    {
-      "id": "EnO",
-      "name": "Encoding Op",
-      "github": "",
-      "gogs": "",
-      "content": "提供各类编码的展示/转换参考的winUi3软件。包含字符编码、进制转换、各类ui控件色卡等功能。"
-    },
-    {
-      "id": "XCal",
-      "name": "Xksyu Calculator",
-      "github": "https://github.com/xksyu2021/XksyuCalculator",
-      "gogs": "https://git.xksyu.online/xksyu2021/XksyuCalculator'",
-      "content": "简单的Windows整数计算器,可供C++与Win32API编程新手参考。"
+      "content": "项目介绍示例\n换行"
     }
   ]
 }

@@ -1,16 +1,16 @@
 {
-  "name":"夏空拾雨小站",
+  "name":"夏空拾雨 | 样板站点",
   "footer": {
-    "content": "夏空拾雨小站 wxp © 2025-2026",
+    "content": "样板站点 by 夏空拾雨2025-2026",
     "icpLink": "https://beian.miit.gov.cn/",
     "icp": "某ICP备0000000000号-x",
     "policeLink": "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=0",
     "police": "某公网安备00000000000000号"
   },
   "git": {
-    "title": "Xksyu 源代码版本管理仓库",
-    "subTitle": "2025-2026 | Powered By Gogs",
-    "loginLink": "https://git.xksyu.online/user/login?",
-    "viewLink": "https://git.xksyu.online/explore/repos"
+    "title": "Example 其他功能站点入口",
+    "subTitle": "2025-2026 | Powered By Example",
+    "loginLink": "",
+    "viewLink": ""
   }
 }
