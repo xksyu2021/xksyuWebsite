@@ -26,4 +26,5 @@ dist-ssr
 
 # Personal files
 public/article/*
-!public/article/index.md
+!public/article/index.json
+!public/article/test.md

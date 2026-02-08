@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import MarkdownIt from "markdown-it";
+import MarkdownItGitHubAlerts from "markdown-it-github-alerts";
 
 const route = useRoute()
 const post = ref<any>(null)
@@ -15,8 +16,10 @@ onMounted(async () => {
 const md = new MarkdownIt({
   html: false,
   linkify: true,
-  typographer: true
+  typographer: true,
+  breaks: true
 })
+md.use(MarkdownItGitHubAlerts)
 const contentHtml = ref('')
 const loading = ref(true)
 
@@ -56,18 +59,122 @@ onMounted(async () => {
       <div class="content">{{post.content}}</div>
     </div>
 
-    <div class="markdown-body" v-html="contentHtml"/>
+    <div class="md" v-html="contentHtml"/>
 
   </div>
 </template>
 
 <style scoped>
-  .markdown-body {
-    padding: 2rem;
+  .md {
     line-height: 1.6;
     text-align: left;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
+  :deep(.md) h1{
+    display: block;
+    width: fit-content;
+    margin: 2rem 0;
+    font-size: 2.3rem;
+    padding: 0 1rem 0.2rem 0;
+    border-bottom: 3px solid var(--color-primary);
+    font-weight: normal;
+    color: var(--color-on-primary-container);
+  }
+  :deep(.md) h2{
+    display: block;
+    width: fit-content;
+    margin: 2rem 0;
+    font-size: 1.8rem;
+    padding: 0 1rem 0.2rem 0;
+    border-bottom: 3px solid var(--color-secondary);
+    font-weight: normal;
+    color: var(--color-on-primary-container);
+  }
+  :deep(.md) p{
+    margin: 0.35rem;
+  }
+  :deep(.md) table {
+    border-collapse: separate;
+    border-spacing: 0.5rem 0.5rem;
+  }
+  :deep(.md) thead th {
+    background-color: var(--color-surface-5);
+    padding: 1rem;
+    font-size: 1.35rem;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: normal;
+  }
+  :deep(.md) tbody td {
+    background-color: var(--color-surface-2);
+    padding: 1rem;
+    border-radius: 15px;
+    vertical-align: top;
+  }
+  :deep(.md) blockquote{
+    border-left: 0.5rem solid var(--color-primary);
+    font-weight: normal;
+    background-color: var(--color-tertiary-container);
+    display: block;
+    width: fit-content;
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+  :deep(.md) .markdown-alert{
+    border-left: 0.5rem solid;
+    font-weight: normal;
+    display: block;
+    width: fit-content;
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+  :deep(.md) .markdown-alert-note {
+    border-left-color: #1e88e5;
+    background-color: #e3f2fd;
+  }
+  :deep(.md) .markdown-alert-tip {
+    border-left-color: #43a047;
+    background-color: #e8f5e9;
+  }
+  :deep(.md) .markdown-alert-important {
+    border-left-color: #8e24aa;
+    background-color: #f3e5f5;
+  }
+  :deep(.md) .markdown-alert-warning {
+    border-left-color: #ff9800;
+    background-color: #fff3e0;
+  }
+  :deep(.md) .markdown-alert-caution {
+    border-left-color: #e53935;
+    background-color: #ffebee;
+  }
+  :deep(.md) .markdown-alert-title{
+    display: flex;
+    gap: 0.7rem;
+    justify-content: center;
+    align-items: center;
+  }
+  :deep(.md) .markdown-alert-note .markdown-alert-title {
+    color: #0d47a1;
+    gap: 1rem;
+  }
+  :deep(.md) .markdown-alert-tip .markdown-alert-title {
+    color: #1b5e20;
+  }
+  :deep(.md) .markdown-alert-important .markdown-alert-title {
+    color: #4a148c;
+  }
+  :deep(.md) .markdown-alert-warning .markdown-alert-title {
+    color: #e65100;
+  }
+  :deep(.md) .markdown-alert-caution .markdown-alert-title {
+    color: #b71c1c;
+  }
+  :deep(.md) a{
+    color: var(--color-on-primary-container);
+    font-style: italic;
+  }
+
 
   .page{
     display: flex;
