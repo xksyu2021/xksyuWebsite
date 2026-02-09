@@ -8,7 +8,7 @@
 
 测试文章内容**甲**乙。
 
-换行。
+换行`html`。
 
 >[!WARNING]
 >警告
@@ -19,6 +19,14 @@
 # 测试文章内容丁 #
 
 [参见](https://xksyu.online)
+
+```C
+#include <stdio.h>
+int main(){
+    printf("hello world");
+    return 0;
+}
+```
 
 | 测试表头甲 | 乙 | 丙 |
 |-------|---|---|
