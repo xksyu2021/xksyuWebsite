@@ -3,6 +3,8 @@ import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import MarkdownIt from "markdown-it";
 import MarkdownItGitHubAlerts from "markdown-it-github-alerts";
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github.css';
 
 const route = useRoute()
 const post = ref<any>(null)
@@ -21,9 +23,18 @@ const md = new MarkdownIt({
   html: false,
   linkify: true,
   typographer: true,
-  breaks: true
-})
-md.use(MarkdownItGitHubAlerts)
+  breaks: true,
+  highlight: function (str: string, lang: string): string {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return `<pre class="hljs"><code>${hljs.highlight(str, { language: lang, ignoreIllegals: true }).value}</code></pre>`;
+      } catch (__) {}
+    }
+    return `<pre class="hljs"><code>${md.utils.escapeHtml(str)}</code></pre>`;
+  }
+});
+
+md.use(MarkdownItGitHubAlerts);
 const contentHtml = ref('')
 const loading = ref(true)
 
@@ -185,6 +196,10 @@ onMounted(async () => {
     background-color: #F5F5F5;
     padding: 0.5rem;
     border-radius: 15px;
+  }
+  :deep(.md) .hljs code{
+    display: block;
+    width: max-content;
   }
 
 
