@@ -113,7 +113,10 @@ onMounted(async () => {
     background-color: var(--color-surface-2);
     padding: 1rem;
     border-radius: 15px;
-    vertical-align: top;
+    vertical-align: middle;
+  }
+  :deep(.md) td[style*="text-align:center"] {
+    white-space: nowrap;
   }
   :deep(.md) blockquote{
     border-left: 0.5rem solid var(--color-primary);
@@ -177,6 +180,11 @@ onMounted(async () => {
   :deep(.md) a{
     color: var(--color-on-primary-container);
     font-style: italic;
+  }
+  :deep(.md) code{
+    background-color: #F5F5F5;
+    padding: 0.5rem;
+    border-radius: 15px;
   }
 
 

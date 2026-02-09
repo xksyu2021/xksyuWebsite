@@ -4,46 +4,11 @@
   ],
   "article": [
     {
-      "path": "test.md",
-      "title": "测试文章标题",
-      "date": "2007-01-19",
-      "clip": "默认",
-      "content": "测试文章简介"
-    },
-    {
-      "path": "test.md",
-      "title": "测试文章标题",
-      "date": "2007-01-19",
-      "clip": "默认",
-      "content": "测试文章简介\n换行"
-    },
-    {
-      "path": "test.md",
-      "title": "测试文章标题",
-      "date": "2007-01-19",
-      "clip": "默认",
-      "content": "测试文章简介\n换行"
-    },
-    {
-      "path": "test.md",
-      "title": "测试文章标题",
-      "date": "2007-01-19",
-      "clip": "默认",
-      "content": "测试文章简介"
-    },
-    {
-      "path": "test.md",
-      "title": "测试文章标题",
-      "date": "2007-01-19",
-      "clip": "默认",
-      "content": "测试文章简介"
-    },
-    {
-      "path": "test.md",
-      "title": "测试文章标题",
-      "date": "2007-01-19",
-      "clip": "默认",
-      "content": "测试文章简介"
+      "path": "2026020901.md",
+      "title": "Android应用权限分类",
+      "date": "2026-02-09",
+      "clip": "编程知识",
+      "content": "安卓软件开发者可以根据不同类别权限的特点，正确拉起权限请求窗口。"
     }
   ]
 }
