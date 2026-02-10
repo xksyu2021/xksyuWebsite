@@ -30,8 +30,8 @@
     {
       "id": "EnO",
       "name": "Encoding Op",
-      "github": "",
-      "gogs": "",
+      "github": "https://github.com/xksyu2021/EncodingOp",
+      "gogs": "https://git.xksyu.online/xksyu2021/EncodingOp",
       "content": "提供各类编码的展示/转换参考的winUi3软件。包含字符编码、进制转换、各类ui控件色卡等功能。"
     },
     {
