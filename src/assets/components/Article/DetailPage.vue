@@ -201,6 +201,11 @@ onMounted(async () => {
     display: block;
     width: max-content;
   }
+  :deep(.md) img{
+    max-width: 40rem;
+    height: auto;
+    margin: 2rem 0;
+  }
 
 
   .page{
