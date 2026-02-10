@@ -16,6 +16,8 @@ export default defineConfig({
                   "https://www.googletagmanager.com",
                   "https://www.google-analytics.com"
               ],
+              'base-uri': ["self"],     // 限制 <base> 标签只能指向自己
+              'form-action': ["self"],
               'style-src': ["self", "unsafe-inline"],
               'img-src': ["self", "data:", "https:", "https://www.google-analytics.com"],
               'connect-src': [
