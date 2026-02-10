@@ -2,9 +2,11 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 import csp from 'vite-plugin-csp'
+// @ts-ignore
+import sri from 'vite-plugin-sri'
 
 export default defineConfig({
-  plugins: [vue(),
+  plugins: [vue(), sri(),
     csp(
       {
         'default-src': ["self"],
