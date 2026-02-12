@@ -52,4 +52,14 @@
       display: flex;
     }
   }
+
+  @media screen and (min-width: 769px) and (max-width: 1280px) {
+    .LineA{
+      display: flex;
+      flex-direction: column;
+    }
+    .headCard,.codeCard,.mediaWarn{
+      width: 75vw;
+    }
+  }
 </style>

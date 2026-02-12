@@ -149,4 +149,19 @@ const filteredArticles = computed(() => {
     font-size: 0.7rem;
   }
 }
+
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+  .grid{
+    columns: 2;
+  }
+  .overlayB:nth-child(2n+1){
+    background-color: var(--color-primary-container);
+  }
+  .overlayB:nth-child(2n){
+    background-color: var(--color-surface-2);
+  }
+  .overlayB:nth-child(3n+2){
+    border:0;
+  }
+}
 </style>

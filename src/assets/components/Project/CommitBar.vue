@@ -103,4 +103,30 @@ onMounted(async () => {
       font-size: 2rem;
     }
   }
+
+  @media screen and (min-width: 769px) and (max-width: 1280px) {
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 85vw;
+      margin: 0.5rem 1rem;
+    }
+    .github{
+      padding: 1rem;
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+    .github img{
+      width: 82vw;
+      height:auto;
+    }
+    .pic{
+      width: 20vw;
+      height:auto;
+    }
+    .count{
+      width: 65vw;
+    }
+  }
 </style>
