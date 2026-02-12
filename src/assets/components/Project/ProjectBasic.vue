@@ -98,8 +98,12 @@
     margin: 0.5rem 0;
   }
   .headLine{
-    gap: 3rem;
+    gap: 0.2rem;
     font-size: 1.7rem;
+    flex-wrap: wrap;
+  }
+  .headLine .title{
+    width: 90vw;
   }
   .headLine .buttonGroup{
     gap: 0.5rem;
@@ -111,7 +115,10 @@
     padding: 0.4rem;
   }
   .content {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+  .project:nth-child(even){
+    align-items: start;
   }
 }
 
