@@ -27,7 +27,7 @@
 
   @media screen and (max-width: 768px) {
     .headCard .zhContent{
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
     .headCard .enContent{
       font-size: 1.5rem;

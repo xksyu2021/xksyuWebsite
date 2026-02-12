@@ -138,10 +138,11 @@
       max-width: 10rem;
     }
     .cardB .quote{
-      font-size: 1.3rem;
+      font-size: 0.8rem;
     }
     .popup{
       margin: 1rem;
+      height: auto;
     }
     .subCardA{
       flex-direction: row;
