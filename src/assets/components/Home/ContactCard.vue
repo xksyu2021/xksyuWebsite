@@ -149,4 +149,9 @@
       gap: 1.5rem
     }
   }
+  @media screen and (min-width: 769px) and (max-width: 1280px) {
+    .cardB .quote{
+      font-size: 1.1rem;
+    }
+  }
 </style>
