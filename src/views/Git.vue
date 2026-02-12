@@ -87,4 +87,30 @@
   font-size: 2.5rem;
 }
 
+@media screen and (max-width: 768px) {
+  .row{
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .column{
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .head{
+    padding: 1.5rem;
+  }
+  .head .title{
+    font-size: 1.7rem;
+  }
+  .head .subtitle{
+    font-size: 0.9em;
+  }
+  .card {
+    padding: 1rem;
+    font-size: 1.2rem;
+    flex: 1;
+  }
+}
+
 </style>
