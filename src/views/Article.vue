@@ -113,4 +113,36 @@ const filteredArticles = computed(() => {
   background-color: var(--color-primary-container);
   transition: background-color 0.7s ease;
 }
+
+@media screen and (max-width: 768px) {
+  .clipRow{
+    flex-flow: wrap;
+    gap: 0.7rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .grid{
+    columns: 1;
+    column-gap: 0.3rem;
+    margin: 0;
+  }
+
+  .card{
+    padding:1rem;
+    gap: 0.5rem;
+  }
+  .card .title{
+    font-size: 2rem;
+  }
+  .card .content{
+    font-size: 0.9rem;
+  }
+  .card .date{
+    font-size: 0.7rem;
+  }
+  .card .line{
+    gap:0.7rem
+  }
+}
 </style>
