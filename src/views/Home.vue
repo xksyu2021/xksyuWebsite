@@ -5,14 +5,14 @@
   import ProjectCard from "@/assets/components/Home/ProjectCard.vue";
 </script>
 
-<template>
+<template class="home">
   <div  class="Line LineA">
-    <HeadCard/>
-    <CodeCard/>
+    <HeadCard class="headCard"/>
+    <CodeCard class="codeCard"/>
   </div>
   <div  class="Line LineB">
-    <ContactCard/>
-    <project-card/>
+    <ContactCard class="contactCard"/>
+    <project-card class="projectCard"/>
   </div>
 </template>
 
@@ -21,5 +21,21 @@
     display: flex;
     gap: 1rem;
     margin: 1rem;
+  }
+  @media screen and (max-width: 768px) {
+    .home{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .Line{
+      flex-direction: column;
+      margin: 0.3rem;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .headCard,.codeCard{
+      width: 88vw;
+    }
   }
 </style>
