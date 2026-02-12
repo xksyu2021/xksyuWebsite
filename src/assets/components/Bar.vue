@@ -96,6 +96,7 @@
       justify-content: space-around;
       align-items: center;
       z-index: 1000;
+      font-size: 0.9rem;
     }
     nav img{
       display: none;

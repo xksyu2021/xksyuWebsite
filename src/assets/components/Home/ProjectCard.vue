@@ -84,6 +84,5 @@
   .project .content{
     font-size: 1rem;
   }
-
 }
 </style>

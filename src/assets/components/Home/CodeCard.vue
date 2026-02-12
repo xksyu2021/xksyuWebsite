@@ -75,8 +75,11 @@
       flex: 1;
     }
     .codeCard .title{
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin-top: 0.5rem;
+    }
+    .codeCard .content{
+      font-size: 0.9rem;
     }
   }
 </style>
