@@ -9,6 +9,7 @@
   <div  class="Line LineA">
     <HeadCard class="headCard"/>
     <CodeCard class="codeCard"/>
+    <div class="mediaWarn">! 建议使用电脑访问网站<br>文章页面在手机上可能显示异常</div>
   </div>
   <div  class="Line LineB">
     <ContactCard class="contactCard"/>
@@ -22,6 +23,16 @@
     gap: 1rem;
     margin: 1rem;
   }
+  .mediaWarn{
+    display: none;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    flex: 1;
+    font-size: 1rem;
+    color: var(--color-on-primary-container);
+  }
+
   @media screen and (max-width: 768px) {
     .home{
       display: flex;
@@ -34,8 +45,11 @@
       gap: 0.5rem;
       align-items: center;
     }
-    .headCard,.codeCard{
+    .headCard,.codeCard,.mediaWarn{
       width: 88vw;
+    }
+    .mediaWarn{
+      display: flex;
     }
   }
 </style>
