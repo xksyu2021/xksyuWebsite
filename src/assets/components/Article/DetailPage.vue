@@ -334,5 +334,20 @@ onMounted(async () => {
     :deep(.md) tbody td {
       padding: 0.7rem;
     }
+
+    :deep(.md) code{
+      background-color: #F5F5F5;
+      padding: 0.25rem;
+      margin: 0.4rem 0.25rem;
+      border-radius: 15px;
+    }
+    :deep(.md) img{
+      max-width: 90vw;
+      height: auto;
+      margin: 1rem 0;
+    }
+    :deep(.md) td[style*="text-align:center"] {
+      white-space: wrap;
+    }
   }
 </style>

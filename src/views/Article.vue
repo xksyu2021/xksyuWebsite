@@ -133,7 +133,7 @@ const filteredArticles = computed(() => {
     gap: 0.5rem;
   }
   .card .title{
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .card .content{
     font-size: 0.9rem;

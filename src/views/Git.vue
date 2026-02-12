@@ -104,7 +104,7 @@
     padding: 1.5rem;
   }
   .head .title{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .head .subtitle{
     font-size: 0.9em;
