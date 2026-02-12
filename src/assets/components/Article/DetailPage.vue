@@ -350,4 +350,10 @@ onMounted(async () => {
       white-space: wrap;
     }
   }
+
+  @media screen and (min-width: 769px) and (max-width: 1280px) {
+    :deep(.md) td[style*="text-align:center"] {
+      white-space: wrap;
+    }
+  }
 </style>

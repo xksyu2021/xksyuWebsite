@@ -122,11 +122,12 @@ onMounted(async () => {
       height:auto;
     }
     .pic{
-      width: 20vw;
-      height:auto;
+      height:25vh;
+      width: auto;
     }
     .count{
-      width: 65vw;
+      height:25vh;
+      width: auto;
     }
   }
 </style>
