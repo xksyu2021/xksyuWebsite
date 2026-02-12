@@ -31,4 +31,12 @@
     font-size: 1.2rem;
     color: var(--color-on-primary-container);
   }
+
+  @media screen and (max-width: 768px) {
+    .footer{
+      padding: 1rem;
+      font-size: 0.6rem;
+      margin: 0.3rem 0 4rem 0;
+    }
+  }
 </style>

@@ -44,6 +44,7 @@
     flex-direction: column;
     align-items: center;
   }
+  
   .logo{
     width: 80px;
     border-radius: 15px;
@@ -81,6 +82,34 @@
   }
   .spacer {
     flex-grow: 1;
+  }
+
+  @media screen and (max-width: 768px) {
+    nav{
+      left: 0;
+      top: auto;
+      bottom: 0;
+      width: 100vw;
+      height: 4rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 1000;
+      font-size: 0.9rem;
+    }
+    nav .list .name{
+      font-size: 0.9rem;
+    }
+    nav img{
+      display: none;
+    }
+    .list{
+      margin-top: 0;
+      width: 20vw;
+      height: auto;
+      flex: 1;
+    }
   }
 
 

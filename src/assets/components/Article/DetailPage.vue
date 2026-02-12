@@ -201,6 +201,11 @@ onMounted(async () => {
     display: block;
     width: max-content;
   }
+  :deep(.md) img{
+    max-width: 40rem;
+    height: auto;
+    margin: 2rem 0;
+  }
 
 
   .page{
@@ -268,5 +273,81 @@ onMounted(async () => {
     display: flex;
     text-align: center;
     justify-content: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .page{
+      margin: 0.5rem;
+      gap:1rem
+    }
+    .row{
+      gap:1rem
+    }
+    .back{
+      padding: 1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    .head{
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .card {
+      padding: 1.5rem;
+      gap: 0.8rem;
+    }
+    .card .title{
+      font-size: 2rem;
+    }
+    .card .content{
+      font-size: 0.9rem;
+    }
+    .card .date{
+      font-size: 0.7rem;
+      color: gray;
+    }
+    .card .line{
+      gap:0.9rem
+    }
+    .card .clip{
+      padding: 0.4rem 0.8rem;
+      font-size: 0.7rem;
+    }
+
+    :deep(.md) h1{
+      margin: 1rem 0;
+      font-size: 2rem;
+    }
+    :deep(.md) h2{
+      margin: 1rem 0;
+      font-size: 1.5rem;
+    }
+    .md {
+      line-height: 1.3;
+      font-size: 0.95rem;
+    }
+    :deep(.md) thead th {
+      padding: 0.7rem;
+      font-size: 1.05rem;
+    }
+    :deep(.md) tbody td {
+      padding: 0.7rem;
+    }
+
+    :deep(.md) code{
+      background-color: #F5F5F5;
+      padding: 0.25rem;
+      margin: 0.4rem 0.25rem;
+      border-radius: 15px;
+    }
+    :deep(.md) img{
+      max-width: 90vw;
+      height: auto;
+      margin: 1rem 0;
+    }
+    :deep(.md) td[style*="text-align:center"] {
+      white-space: wrap;
+    }
   }
 </style>
