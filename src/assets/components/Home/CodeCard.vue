@@ -68,4 +68,15 @@
     background-color: var(--block-color);
     border-radius: 10px;
   }
+
+  @media screen and (max-width: 768px) {
+    .codeCard{
+      padding: 1rem;
+      flex: 1;
+    }
+    .codeCard .title{
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
+    }
+  }
 </style>

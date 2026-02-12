@@ -128,4 +128,24 @@
     padding: 2rem;
     white-space: pre-wrap;
   }
+
+  @media screen and (max-width: 768px) {
+    .column{
+      width: 95vw;
+      gap: 0.5rem;
+    }
+    .cardB img{
+      max-width: 10rem;
+    }
+    .cardB .quote{
+      font-size: 1.3rem;
+    }
+    .popup{
+      margin: 1rem;
+    }
+    .subCardA{
+      flex-direction: row;
+      gap: 1.5rem
+    }
+  }
 </style>

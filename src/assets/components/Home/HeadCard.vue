@@ -24,4 +24,17 @@
     font-size: 4rem;
     font-family: "ENFA", sans-serif;
   }
+
+  @media screen and (max-width: 768px) {
+    .headCard .zhContent{
+      font-size: 2.5rem;
+    }
+    .headCard .enContent{
+      font-size: 1.5rem;
+    }
+    .headCard{
+      padding: 1rem;
+      width: 95vw;
+    }
+  }
 </style>

@@ -66,4 +66,24 @@
 .project .content{
   font-size: 1.2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .list{
+    gap: 0.5rem;
+  }
+  .list .project{
+    padding: 1rem;
+  }
+  .titleLine img{
+    width: 1.2em;
+    height: auto;
+  }
+  .titleLine .title{
+    font-size: 1.7rem;
+  }
+  .project .content{
+    font-size: 1rem;
+  }
+
+}
 </style>
