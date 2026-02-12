@@ -91,4 +91,28 @@
   white-space: pre-wrap;
 }
 
+@media screen and (max-width: 768px) {
+  .project{
+    padding: 1rem;
+    gap: 0.8rem;
+    margin: 0.5rem 0;
+  }
+  .headLine{
+    gap: 3rem;
+    font-size: 1.7rem;
+  }
+  .headLine .buttonGroup{
+    gap: 0.5rem;
+  }
+  .headLine .fButton {
+    height: auto;
+    width: 3rem;
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+  .content {
+    font-size: 0.9rem;
+  }
+}
+
 </style>

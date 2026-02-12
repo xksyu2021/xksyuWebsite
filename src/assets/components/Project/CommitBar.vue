@@ -70,4 +70,37 @@ onMounted(async () => {
     font-size: 5rem;
     color: black;
   }
+
+  @media screen and (max-width: 768px) {
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100vw;
+      margin: 0;
+      gap: 0.5rem;
+    }
+    .github{
+      padding: 1rem;
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+    .github img{
+      width: 88vw;
+      height:auto;
+    }
+    .pic{
+      width: 30vw;
+      height:auto;
+    }
+    .count{
+      font-size: 1rem;
+      width: 65vw;
+      height: auto;
+      padding: 1rem;
+    }
+    .count .num{
+      font-size: 2rem;
+    }
+  }
 </style>
