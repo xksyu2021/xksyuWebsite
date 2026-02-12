@@ -138,7 +138,7 @@
       max-width: 10rem;
     }
     .cardB .quote{
-      font-size: 0.8rem;
+      font-size: 1.1rem;
     }
     .popup{
       margin: 1rem;

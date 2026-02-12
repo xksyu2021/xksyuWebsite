@@ -98,6 +98,9 @@
       z-index: 1000;
       font-size: 0.9rem;
     }
+    nav .list .name{
+      font-size: 0.9rem;
+    }
     nav img{
       display: none;
     }
