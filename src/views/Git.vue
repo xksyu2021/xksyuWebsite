@@ -88,6 +88,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .overlay{
+    height: 85vh;
+  }
   .row{
     flex-direction: column;
     gap: 0.5rem;
