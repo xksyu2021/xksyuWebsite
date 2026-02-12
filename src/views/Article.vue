@@ -144,5 +144,9 @@ const filteredArticles = computed(() => {
   .card .line{
     gap:0.7rem
   }
+  .card .clip{
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+  }
 }
 </style>

@@ -9,7 +9,7 @@
   <div  class="Line LineA">
     <HeadCard class="headCard"/>
     <CodeCard class="codeCard"/>
-    <div class="mediaWarn">! 建议使用电脑访问网站<br>文章内的表格与代码块在手机上可能显示异常</div>
+    <div class="mediaWarn">! 建议使用电脑访问网站<br>文章内的表格与代码块<br>在手机上可能显示异常</div>
   </div>
   <div  class="Line LineB">
     <ContactCard class="contactCard"/>
