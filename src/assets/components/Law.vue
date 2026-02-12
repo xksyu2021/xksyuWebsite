@@ -36,7 +36,7 @@
     .footer{
       padding: 1rem;
       font-size: 0.6rem;
-      margin: 0 0 4rem;
+      margin: 0.3rem 0 4rem 0;
     }
   }
 </style>
