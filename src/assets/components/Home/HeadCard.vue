@@ -37,4 +37,13 @@
       width: 95vw;
     }
   }
+
+  @media screen and (min-width: 769px) and (max-width: 1280px) {
+    .headCard .zhContent{
+      font-size: 4.2rem;
+    }
+    .headCard .enContent{
+      font-size: 3.5rem;
+    }
+  }
 </style>
