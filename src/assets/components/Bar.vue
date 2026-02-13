@@ -99,7 +99,7 @@
       font-size: 0.9rem;
     }
     nav .list .name{
-      font-size: 0.9rem;
+      font-size: 0.7rem;
     }
     nav img{
       display: none;
