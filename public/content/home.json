@@ -17,7 +17,8 @@
   "contactCard": {
     "contactLink": [
       {"name": "Github", "link": "https://github.com/xksyu2021","icon": "bi bi-github"},
-      {"name": "Email", "link": "mailto:xksyu2021@gmail.com","icon": "bi bi-envelope-fill"}
+      {"name": "Email", "link": "mailto:xksyu2021@gmail.com","icon": "bi bi-envelope-fill"},
+      {"name": "开往（随机友站）", "link": "https://www.travellings.cn/go.html","icon": "bi bi-train-front-fill"}
     ],
     "bio": {
       "text": "\t从WordPress低代码搭建网站，到接触HTML与CSS；从C语言黑窗口第一次输出“Hello World”，到安卓Kotlin精密复杂的应用程序；从基础的ppt排版，到解决系统疑难杂症......在探索计算机的世界里，向前，历经坎坷，不断成长，回首是收获。\n\t我曾迷茫于过往，因为尽管拼尽全力，希望依然在眼前悉数破灭，唯有遗憾与无奈的残影。可是，也许原本就不需要那么多的希望——走下去，你走过的地方便有了道路，你所望的方向一定星汉灿烂。\n\t雨落之后，天空洒下光明，启程吧。",
