@@ -95,8 +95,8 @@
     gap: 1rem;
   }
   .cardB img{
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     border-radius: 20px;
   }
   .cardB .quote{
@@ -130,6 +130,12 @@
   }
 
   @media screen and (max-width: 768px) {
+    .cardA{
+      font-size: 0.9rem;
+    }
+    .cardA .subCardA{
+      gap: 0.5rem;
+    }
     .column{
       width: 95vw;
       gap: 0.5rem;
@@ -145,7 +151,6 @@
       height: auto;
     }
     .subCardA{
-      flex-direction: row;
       gap: 1.5rem
     }
   }
