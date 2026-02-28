@@ -17,7 +17,7 @@
   "contactCard": {
     "contactLink": [
       {"name": "Github", "link": "https://github.com/xksyu2021","icon": "bi bi-github"},
-      {"name": "Email", "link": "mailto:xksyu2021@gmail.com","icon": "bi bi-envelope-fill"},
+      {"name": "Email", "link": "mailto:1@xksyu.cn","icon": "bi bi-envelope-fill"},
       {"name": "开往（随机友站）", "link": "https://www.travellings.cn/go.html","icon": "bi bi-train-front-fill"}
     ],
     "bio": {
