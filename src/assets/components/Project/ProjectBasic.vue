@@ -59,6 +59,7 @@
   font-size: 3.5rem;
   font-family: "ENFB", sans-serif;
   align-items: center;
+  text-wrap: balance;
 }
 
 .headLine .buttonGroup{
