@@ -89,6 +89,7 @@
 .content{
   font-size: 1.3rem;
   white-space: pre-wrap;
+  text-wrap: pretty;
 }
 
 @media screen and (max-width: 768px) {

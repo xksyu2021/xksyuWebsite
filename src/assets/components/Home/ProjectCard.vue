@@ -83,6 +83,7 @@
   }
   .project .content{
     font-size: 1rem;
+    text-wrap: pretty;
   }
 }
 </style>
