@@ -102,6 +102,7 @@
   .cardB .quote{
     font-size: 1.35rem;
     font-family: "ZHFA", sans-serif;
+    text-wrap: pretty;
   }
 
   .popup-overlay {

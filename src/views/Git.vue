@@ -61,6 +61,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center ;
+  text-wrap: pretty;
 }
 .head .title{
   font-size: 3rem;

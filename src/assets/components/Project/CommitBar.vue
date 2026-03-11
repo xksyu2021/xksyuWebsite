@@ -62,6 +62,7 @@ onMounted(async () => {
     color: var(--color-on-primary-container);
     padding: 2rem;
     flex: 1;
+    text-wrap: pretty;
   }
   .count .line2{
     text-align: end;
