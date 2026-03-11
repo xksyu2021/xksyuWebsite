@@ -87,6 +87,7 @@ const filteredArticles = computed(() => {
 
 .card .title{
   font-size: 2.5rem;
+  text-wrap: balance;
 }
 .card .content{
   font-size: 1.2rem;
