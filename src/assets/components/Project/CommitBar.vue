@@ -62,6 +62,7 @@ onMounted(async () => {
     color: var(--color-on-primary-container);
     padding: 2rem;
     flex: 1;
+    text-wrap: pretty;
   }
   .count .line2{
     text-align: end;
@@ -90,14 +91,15 @@ onMounted(async () => {
       height:auto;
     }
     .pic{
-      width: 30vw;
-      height:auto;
+      width: auto;
+      height:12vh;
     }
     .count{
       font-size: 1rem;
-      width: 65vw;
-      height: auto;
+      width: auto;
+      height: 12vh;
       padding: 1rem;
+      justify-content: center;
     }
     .count .num{
       font-size: 2rem;

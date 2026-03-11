@@ -80,9 +80,11 @@
   }
   .titleLine .title{
     font-size: 1.7rem;
+    text-wrap: balance;
   }
   .project .content{
     font-size: 1rem;
+    text-wrap: pretty;
   }
 }
 </style>

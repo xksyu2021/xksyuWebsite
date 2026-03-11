@@ -87,9 +87,11 @@ const filteredArticles = computed(() => {
 
 .card .title{
   font-size: 2.5rem;
+  text-wrap: balance;
 }
 .card .content{
   font-size: 1.2rem;
+  text-wrap: pretty;
 }
 .card .date{
   font-size: 0.9rem;
@@ -107,6 +109,7 @@ const filteredArticles = computed(() => {
   display: flex;
   text-align: center;
   justify-content: center;
+  text-wrap: pretty;
 }
 
 .clip:hover{

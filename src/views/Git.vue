@@ -61,6 +61,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center ;
+  text-wrap: balance;
 }
 .head .title{
   font-size: 3rem;
@@ -111,7 +112,7 @@
   }
   .card {
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     flex: 1;
   }
 }
