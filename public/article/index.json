@@ -4,6 +4,13 @@
   ],
   "article": [
     {
+      "path": "2026031701.md",
+      "title": "vscode运行Java程序方法",
+      "date": "2026-03-17",
+      "clip": "编程知识",
+      "content": "学习Java，如果不想用过于“厚重”的大型IDE，如何在vscode里运行代码呢？"
+    },
+    {
       "path": "2026021001.md",
       "title": "Minecraft基岩版账号注册疑难解决",
       "date": "2026-02-10",
