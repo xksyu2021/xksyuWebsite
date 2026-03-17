@@ -19,6 +19,7 @@
   .headCard .zhContent{
     font-size: 6rem;
     font-family: "ZHFA", sans-serif;
+    text-wrap: balance;
   }
   .headCard .enContent{
     font-size: 4rem;
