@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import {computed, defineAsyncComponent, onMounted, ref} from "vue";
+import {defineAsyncComponent, onMounted, ref, shallowRef, watch} from "vue";
 
 const config = ref({name:'' as string})
 onMounted(async () => {
@@ -9,11 +9,18 @@ onMounted(async () => {
 })
 
 const route = useRoute()
+const Tool = shallowRef();
+watch(
+    () => route.params.id,
+    (newId) => {
+      if (newId) {
+        const componentName = (newId as string).replace('.vue', '');
+        Tool.value = defineAsyncComponent(() => import(`@/tool/${componentName}.vue`));
+      }
+    },
+    { immediate: true }
+);
 
-const Tool = computed(() => {
-  const id = route.params.id as string
-  return defineAsyncComponent(() => import(`../tools/${id}.vue`))
-})
 </script>
 
 <template>
@@ -23,13 +30,14 @@ const Tool = computed(() => {
     </div>
     <div class="head no-select">{{config.name}}</div>
   </div>
-  <Tool/>
+  <Tool class="SubContent"/>
 </template>
 
 <style scoped>
 .row{
   display: flex;
-  gap:2rem
+  gap:1rem;
+  margin: 0 1rem;
 }
 .back{
   background-color:var(--color-secondary-container);
@@ -54,5 +62,8 @@ const Tool = computed(() => {
   font-family: "ZHFA", sans-serif;
 }
 
+.SubContent{
+  margin: 0 1rem;
+}
 
 </style>
