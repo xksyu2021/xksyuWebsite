@@ -118,6 +118,45 @@
         -webkit-user-drag: none;
     }
 
+    input[type=checkbox]{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 1px solid var(--color-on-primary-container);
+        border-radius: 30%;
+        background-color: var(--color-surface-5);
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+    }
+    input[type="checkbox"]:checked {
+        background-color: var(--color-secondary);
+    }
+    input[type="checkbox"]:checked::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: 8px;
+        height: 8px;
+        background: white;
+        border-radius: 50%;
+    }
+    input[type=text]{
+        width: 50px;
+        height: 20px;
+        border: 1px solid var(--color-on-primary-container);
+        border-radius: 10%;
+        background-color: var(--color-surface-5);
+    }
+    input[type=text]:focus {
+        outline: none;
+        border: 1px solid var(--color-on-primary-container);
+        border-radius: 10%;
+    }
+
     @media screen and (max-width: 768px) {
         main {
             display: flex;
