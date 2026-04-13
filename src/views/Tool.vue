@@ -16,7 +16,7 @@
   .overlay{
     columns: 2;
     column-gap: 1rem;
-    margin: 1rem;
+    margin: 2rem 1rem 1rem;
   }
   .card{
     break-inside: avoid;
