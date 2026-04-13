@@ -1,0 +1,24 @@
+{
+  "tool": [
+    {
+      "path": "test.vue",
+      "title": "测试工具标题",
+      "content": "测试工具内容"
+    },
+    {
+      "path": "test.vue",
+      "title": "测试工具标题",
+      "content": "测试工具内容"
+    },
+    {
+      "path": "test.vue",
+      "title": "测试工具标题",
+      "content": "测试工具内容"
+    },
+    {
+      "path": "test.vue",
+      "title": "测试工具标题",
+      "content": "测试工具内容"
+    }
+  ]
+}

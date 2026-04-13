@@ -11,7 +11,8 @@ export const navList:NavList[] = [
     {show:true,path:'/post',component: () => import('@/views/Article.vue'),name:"文章",icon:"bi bi-file-earmark-text"},
     {show:true,path:'/tool',component: () => import('@/views/Tool.vue'),name:"工具",icon:"bi bi-magic"},
     {show:true,path:'/git',component: () => import('@/views/Git.vue'),name:"Git",icon:"bi bi-git"},
-    {show:false,path:'/post/:id',component: () => import('@/assets/components/Article/DetailPage.vue'),name:"",icon:""}
+    {show:false,path:'/post/:id',component: () => import('@/assets/components/Article/DetailPage.vue'),name:"",icon:""},
+    {show:false,path:'/tool/:id',component: () => import('@/assets/components/Tool/DetailPage.vue'),name:"",icon:""}
 ]
 
 const router = createRouter({
