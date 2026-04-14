@@ -19,7 +19,7 @@ export default defineConfig({
               'base-uri': ["self"],
               'form-action': ["self"],
               'style-src': ["self", "unsafe-inline"],
-              'img-src': ["self", "data:", "https:", "https://www.google-analytics.com"],
+              'img-src': ["self", "data:","blob:", "https:", "https://www.google-analytics.com"],
               'connect-src': [
                   "self",
                   "https://www.google-analytics.com"
