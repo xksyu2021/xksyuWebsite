@@ -27,8 +27,8 @@ onMounted(()=>{
     list.value = raw;
   })
   socket.on('win',(code)=>{
-    if(code==1) alert("红队赢了")
-    else if(code==2) alert("蓝队赢了")
+    if(code==1) alert("红队胜利")
+    else if(code==2) alert("蓝队胜利")
   })
 })
 onUnmounted(() => {
