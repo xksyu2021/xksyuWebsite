@@ -19,7 +19,7 @@ const list = ref<list[]>(
 )
 let socket: Socket
 onMounted(()=>{
-  socket = io('https://api.xksyu.cn/')
+  socket = io('https://api.xksyu.cn/codename')
   socket.on('server-return-info',(raw:get) => {
     data.value = raw;
   })
