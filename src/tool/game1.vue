@@ -3,48 +3,52 @@ import {ref, onMounted, onUnmounted, watch} from 'vue'
 import { io,Socket } from 'socket.io-client'
 
 interface get{
-  uuid:number,role:number,cur:number,op:boolean,content:{text:string,info:number}[],run:boolean,whole:{name:string,role:number}[]
+  role:number,cur:number,op:boolean,content:{text:string,info:number}[],run:boolean
 }
-//1red,2blue,10redplayer,11redwin,12redlose,etc.30mutiplayer
+interface list{
+  name:string,role:number
+}
+//1red,2blue,10redplayer,etc.30mutiplayer
 //1red,2blue,3white,4keli,0unknown
 
 const data = ref<get>({
-  uuid:1,role:1,cur:20,op:true,run:true,
-  content:[
-    { text: "测试", info: 2 }, { text: "样例", info: 0 }, { text: "测试", info: 1 }, { text: "样例", info: 1 }, { text: "测试", info: 3 },
-    { text: "样例", info: 2 }, { text: "测试", info: 0 }, { text: "样例", info: 2 }, { text: "测试", info: 3 }, { text: "样例", info: 1 },
-    { text: "测试", info: 0 }, { text: "样例", info: 2 }, { text: "测试", info: 2 }, { text: "样例", info: 1 }, { text: "测试", info: 3 },
-    { text: "样例", info: 0 }, { text: "测试", info: 2 }, { text: "样例", info: 4 }, { text: "测试", info: 1 }, { text: "样例", info: 3 },
-    { text: "测试", info: 0 }, { text: "样例", info: 4 }, { text: "测试", info: 2 }, { text: "样例", info: 1 }, { text: "测试", info: 3 },
-    { text: "样例", info: 0 }, { text: "测试", info: 1 }, { text: "样例", info: 2 }, { text: "测试", info: 3 }, { text: "样例", info: 1 }
-  ],
-  whole:[{role:1,name:"A"},{role:2,name:"B"},{role:10,name:"C"},{role:20,name:"D"},{role:30,name:"E"}]})
+  role:-1,cur:-1,op:false,run:false,
+  content:[]})
+const list = ref<list[]>(
+    []
+)
 let socket: Socket
 onMounted(()=>{
-  socket = io('http://localhost:5000')
-  socket.on('server-return',(raw:get) => {
+  socket = io('https://api.xksyu.cn/')
+  socket.on('server-return-info',(raw:get) => {
     data.value = raw;
   })
-  }
-)
+  socket.on('server-return-list',(raw:list[]) => {
+    list.value = raw;
+  })
+  socket.on('win',(code)=>{
+    if(code==1) alert("红队赢了")
+    else if(code==2) alert("蓝队赢了")
+  })
+})
 onUnmounted(() => {
   if (socket) socket.disconnect();
 });
 const postData = (poster:number) => {
-  socket.emit('server-recive-action',{uuid:data.value.uuid,cur:poster})
+  socket.emit('server-receive-action',poster)
 }
 //>0info,-1op,-2next
 const name = ref("mouse")
 const postName = (poster:string) => {
-  socket.emit('server-recive-name',{uuid:data.value.uuid,name:poster})
+  socket.emit('server-receive-name',poster)
 }
 
 const opButton = ref<{text:string,class:string,cur:string}>({text:"loading...",class:"",cur:""})
-watch(data,()=>{
+watch(data.value,()=>{
   opButton.value.text = data.value.op ?
-      (data.value.run? "中止游戏" : "开始游戏") : (data.value.run? "游戏正在进行" : "加入游戏" )
+      (data.value.run? "中止游戏" : "开始游戏") : (data.value.run? "正在进行" : "等待游戏开始" )
   opButton.value.class = data.value.op ?
-      (data.value.run? "button buttonB" : "button buttonA") : (data.value.run? "游戏正在进行" : "button buttonA" )
+      (data.value.run? "button buttonB" : "button buttonA") : (data.value.run? "" : "button buttonA" )
   switch (data.value.cur){
     case 1: opButton.value.cur = "红队长组织语言"; break;
     case 2: opButton.value.cur = "蓝队长组织语言"; break;
@@ -93,7 +97,7 @@ const getTextStyle = (info:number) => {
       队长引导队员选中本队词语。<br>
       绿色为无关词语，黑色代表炸弹。
       <div class="buttonGroup no-select">
-        <div :class="opButton.class" @click="postData(-1)"> {{opButton.text}} </div>
+        <div :class="opButton.class" @click="postData(-1)" v-if="data.op||!data.run"> {{opButton.text}} </div>
         <div class="button"  style="background-color: #DCFADC"
         @click="postData(-2)">下一步骤</div>
       </div>
@@ -108,7 +112,7 @@ const getTextStyle = (info:number) => {
 
       <div class="player">
         <div
-            v-for="player in data.whole"
+            v-for="player in list"
             class="singleP"
             :class="{ selected: data.cur === player.role }"
             :style="{ backgroundColor: getPlayerColor(player.role) }">
