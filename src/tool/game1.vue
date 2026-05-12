@@ -2,17 +2,40 @@
 import {ref, onMounted, onUnmounted, watch} from 'vue'
 import { io,Socket } from 'socket.io-client'
 
+const team = {
+  //used in words & team
+  INIT: -99,
+  SUM: -1,
+  UNKNOWN: 0,
+  RED: 1,
+  BLUE: 2,
+  WHITE: 3,
+  TNT: 4,
+} as const;
+const status = {
+  //used in cur & role
+  INIT: -99,
+  RED_CAP: 1, BLUE_CAP: 2,
+  RED_MEM: 10, BLUE_MEM: 20,
+  MID_MEM: 30
+} as const;
+const request = {
+  //used in socket
+  OP: -1,
+  NEXT: -2
+} as const;
+type team = typeof team[keyof typeof team];
+type status = typeof status[keyof typeof status];
+
 interface get{
-  role:number,cur:number,op:boolean,content:{text:string,info:number}[],run:boolean
+  role:status,cur:status,op:boolean,content:{text:string,info:team}[],run:boolean
 }
 interface list{
-  name:string,role:number
+  name:string,role:status
 }
-//1red,2blue,10redplayer,etc.30mutiplayer
-//1red,2blue,3white,4keli,0unknown
 
 const data = ref<get>({
-  role:-1,cur:-1,op:false,run:false,
+  role:status.INIT,cur:status.INIT,op:false,run:false,
   content:[]})
 const list = ref<list[]>(
     []
@@ -27,8 +50,8 @@ onMounted(()=>{
     list.value = raw;
   })
   socket.on('win',(code)=>{
-    if(code==1) alert("红队胜利")
-    else if(code==2) alert("蓝队胜利")
+    if(code==team.RED) alert("红队胜利")
+    else if(code==team.BLUE) alert("蓝队胜利")
   })
 })
 onUnmounted(() => {
@@ -37,48 +60,49 @@ onUnmounted(() => {
 const postData = (poster:number) => {
   socket.emit('server-receive-action',poster)
 }
-//>0info,-1op,-2next
-const name = ref("mouse")
+
+const name = ref("AutoMouse")
 const postName = (poster:string) => {
   socket.emit('server-receive-name',poster)
 }
 
 const opButton = ref<{text:string,class:string,cur:string}>({text:"loading...",class:"",cur:""})
-watch(data.value,()=>{
+watch(data,()=>{
   opButton.value.text = data.value.op ?
       (data.value.run? "中止游戏" : "开始游戏") : (data.value.run? "正在进行" : "等待游戏开始" )
   opButton.value.class = data.value.op ?
       (data.value.run? "button buttonB" : "button buttonA") : (data.value.run? "" : "button buttonA" )
   switch (data.value.cur){
-    case 1: opButton.value.cur = "红队长组织语言"; break;
-    case 2: opButton.value.cur = "蓝队长组织语言"; break;
-    case 10: opButton.value.cur = "红队员做出选择"; break;
-    case 20: opButton.value.cur = "蓝队员做出选择"; break;
+    case status.RED_CAP: opButton.value.cur = "红队长组织语言"; break;
+    case status.BLUE_CAP: opButton.value.cur = "蓝队长组织语言"; break;
+    case status.RED_MEM: opButton.value.cur = "红队员做出选择"; break;
+    case status.BLUE_MEM: opButton.value.cur = "蓝队员做出选择"; break;
   }
 },{deep:true, immediate: true })
 
 const getPlayerColor = (role: number) => {
-  if (role === 1 || role === 10) return "var(--color-secondary-container)";
-  if (role === 2 || role === 20) return "var(--color-primary-container)";
-  if (role === 30) return "#DCFADC";
+  if (role === status.RED_MEM || role === status.RED_CAP) return "var(--color-secondary-container)";
+  if (role === status.BLUE_CAP || role === status.BLUE_MEM) return "var(--color-primary-container)";
+  if (role === status.MID_MEM) return "#DCFADC";
 };
-const getPlayerTitle = (role: number) => {
-  const titles: Record<number, string> = {
-    1: "红队队长", 2: "蓝队队长", 10: "红队队员", 20: "蓝队队员", 30: "自由人"
+const getPlayerTitle = (role: status) => {
+  const titles: Partial<Record<status, string>> = {
+    [status.RED_CAP]: "红队队长", [status.BLUE_CAP]: "蓝队队长",
+    [status.RED_MEM]: "红队队员", [status.BLUE_MEM]: "蓝队队员", [status.MID_MEM]: "自由人"
   };
   return titles[role];
 };
-const getTextStyle = (info:number) => {
+const getTextStyle = (info:team) => {
   switch (info){
-    case 0:
+    case team.UNKNOWN:
       return { borderWidth: "2px", borderStyle: "solid" };
-    case 1:
-      return { backgroundColor: "var(--color-primary-container)" };
-    case 2:
+    case team.RED:
       return { backgroundColor: "var(--color-secondary-container)" };
-    case 3:
+    case team.BLUE:
+      return { backgroundColor: "var(--color-primary-container)" };
+    case team.WHITE:
       return { backgroundColor: "#DCFADC" };
-    case 4:
+    case team.TNT:
       return { backgroundColor: "#44403C", color: "white" };
   }
 }
@@ -97,9 +121,9 @@ const getTextStyle = (info:number) => {
       队长引导队员选中本队词语。<br>
       绿色为无关词语，黑色代表炸弹。
       <div class="buttonGroup no-select">
-        <div :class="opButton.class" @click="postData(-1)" v-if="data.op||!data.run"> {{opButton.text}} </div>
+        <div :class="opButton.class" @click="postData(request.OP)"> {{opButton.text}} </div>
         <div class="button"  style="background-color: #DCFADC"
-        @click="postData(-2)">下一步骤</div>
+        @click="postData(request.NEXT)">下一步骤</div>
       </div>
     </div>
 
@@ -119,7 +143,7 @@ const getTextStyle = (info:number) => {
           <div class="ptitle">{{ getPlayerTitle(player.role) }}</div>
           <div class="nameLine">
             <div class="name">{{ player.name }}</div>
-            <div class="subCur" v-if="data.role === player.role">我</div>
+            <div class="subCur" v-if="data.role === player.role">我方</div>
             <div class="subCur" v-if="data.cur === player.role">当前</div>
           </div>
         </div>

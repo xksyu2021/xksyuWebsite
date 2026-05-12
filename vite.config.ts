@@ -22,7 +22,9 @@ export default defineConfig({
               'img-src': ["self", "data:","blob:", "https:", "https://www.google-analytics.com"],
               'connect-src': [
                   "self",
-                  "https://www.google-analytics.com"
+                  "https://www.google-analytics.com",
+                  "https://api.xksyu.cn",
+                  "wss://api.xksyu.cn"
               ],
               'font-src': ["self", "https://fonts.gstatic.com"],
               'object-src': ["none"],
