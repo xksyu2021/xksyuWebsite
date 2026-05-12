@@ -28,14 +28,14 @@ type team = typeof team[keyof typeof team];
 type status = typeof status[keyof typeof status];
 
 interface get{
-  role:status,cur:status,op:boolean,content:{text:string,info:team}[],run:boolean
+  role:status,cur:status,op:boolean,content:{text:string,info:team}[],run:boolean,id:string
 }
 interface list{
-  name:string,role:status
+  name:string,role:status,id:string
 }
 
 const data = ref<get>({
-  role:status.INIT,cur:status.INIT,op:false,run:false,
+  role:status.INIT,cur:status.INIT,op:false,run:false,id:" ",
   content:[]})
 const list = ref<list[]>(
     []
@@ -143,8 +143,8 @@ const getTextStyle = (info:team) => {
           <div class="ptitle">{{ getPlayerTitle(player.role) }}</div>
           <div class="nameLine">
             <div class="name">{{ player.name }}</div>
-            <div class="subCur" v-if="data.role === player.role">我方</div>
-            <div class="subCur" v-if="data.cur === player.role">当前</div>
+            <div class="subCur" v-if="data.id == player.id">我</div>
+            <div class="subCur" v-if="data.cur == player.role">当前</div>
           </div>
         </div>
       </div>
