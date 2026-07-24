@@ -2,7 +2,7 @@
 >
 > 并分离个人配置与内部代码，采用子模块代替分支进行管理。
 >
-> 新版地址 [liteblogh](https://github.com/xksyu2021/liteblog)
+> 新版地址 [liteblog](https://github.com/xksyu2021/liteblog)
 
 **vite + vue + typescript** | 轻量可爱风格的个人网站
 
