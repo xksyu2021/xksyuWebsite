@@ -1,6 +1,12 @@
+> 已重构。新版采用内聚性更强的Vue组件逻辑与CSS工具类。
+>
+> 并分离个人配置与内部代码，采用子模块代替分支进行管理。
+>
+> 新版地址 [liteblogh](https://github.com/xksyu2021/liteblog)
+
 **vite + vue + typescript** | 轻量可爱风格的个人网站
 
-[示例页面](http://xksyu.online)
+[示例页面](https://xksyu.cn)
 
 ## 项目特点 ##
 尽管是静态网站，但是实现了内容与框架的分离，基础内容硬编码，在构建前调整。而项目介绍/文章等，只需在json文件中编辑即可。
